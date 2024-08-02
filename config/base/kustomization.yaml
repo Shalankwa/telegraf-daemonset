@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: monitoring
+
+resources:
+  - telegraf/namespace.yaml
+  - telegraf/config.yaml
+  - telegraf/service_account.yaml
+  - telegraf/role.yaml
+  - telegraf/role-binding.yaml
+  - telegraf/daemonset.yaml
